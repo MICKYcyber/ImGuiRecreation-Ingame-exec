@@ -38,8 +38,8 @@ local Shrink = Instance.new("ImageLabel")
 --Properties:
 
 ImGui.Name = "ImGui"
-ImGui.Parent = game:GetService("CoreGui")
-ImGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
+ImGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ImGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
 Main.Parent = ImGui
@@ -48,7 +48,6 @@ Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderSizePixel = 0
 Main.Position = UDim2.new(0.0849604234, 0, 0.122075282, 0)
 Main.Size = UDim2.new(0, 371, 0, 20)
-Main.ZIndex = 2147483647
 
 TabBar.Name = "TabBar"
 TabBar.Parent = Main
@@ -548,7 +547,7 @@ local function PLALAP_script() -- ImGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(PLALAP_script)()]]
+coroutine.wrap(PLALAP_script)()
 local code = [[-- Monstrum's Gui to Lua\n-- Version: 3.2
 
 -- Instances:
@@ -589,8 +588,8 @@ local Shrink = Instance.new("ImageLabel")
 --Properties:
 
 ImGui.Name = "ImGui"
-ImGui.Parent = game:GetService("CoreGui")
-ImGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
+ImGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ImGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
 Main.Parent = ImGui
@@ -599,7 +598,6 @@ Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderSizePixel = 0
 Main.Position = UDim2.new(0.0849604234, 0, 0.122075282, 0)
 Main.Size = UDim2.new(0, 371, 0, 20)
-Main.ZIndex = 2147483647
 
 TabBar.Name = "TabBar"
 TabBar.Parent = Main
@@ -1100,4 +1098,4 @@ local function PLALAP_script() -- ImGui.LocalScript
 	end)
 end
 coroutine.wrap(PLALAP_script)()]]
-queue_on_teleport(code)
+queueonteleport(code)
