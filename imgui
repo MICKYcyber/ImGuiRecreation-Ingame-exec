@@ -1,0 +1,1103 @@
+-- Monstrum's Gui to Lua\n-- Version: 3.2
+
+-- Instances:
+
+local ImGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local TabBar = Instance.new("Frame")
+local Body = Instance.new("Frame")
+local Scroller = Instance.new("ScrollingFrame")
+local UIStroke = Instance.new("UIStroke")
+local TextBox = Instance.new("TextBox")
+local Scale = Instance.new("ImageLabel")
+local ExecuteButton = Instance.new("TextLabel")
+local Tab = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local UIPadding = Instance.new("UIPadding")
+local TabList = Instance.new("Frame")
+local UIStroke_2 = Instance.new("UIStroke")
+local OpenFile = Instance.new("Frame")
+local UIStroke_3 = Instance.new("UIStroke")
+local OpenFile_2 = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local UIListLayout = Instance.new("UIListLayout")
+local UIPadding_2 = Instance.new("UIPadding")
+local SaveFile = Instance.new("Frame")
+local UIStroke_4 = Instance.new("UIStroke")
+local SaveFile_2 = Instance.new("TextLabel")
+local UIPadding_3 = Instance.new("UIPadding")
+local TextLabel_2 = Instance.new("TextLabel")
+local Discard = Instance.new("Frame")
+local UIStroke_5 = Instance.new("UIStroke")
+local Discard_2 = Instance.new("TextLabel")
+local UIPadding_4 = Instance.new("UIPadding")
+local TextLabel_3 = Instance.new("TextLabel")
+local Title_2 = Instance.new("TextLabel")
+local Shrink = Instance.new("ImageLabel")
+
+--Properties:
+
+ImGui.Name = "ImGui"
+ImGui.Parent = game:GetService("CoreGui")
+ImGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
+
+Main.Name = "Main"
+Main.Parent = ImGui
+Main.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.0849604234, 0, 0.122075282, 0)
+Main.Size = UDim2.new(0, 371, 0, 20)
+Main.ZIndex = 2147483647
+
+TabBar.Name = "TabBar"
+TabBar.Parent = Main
+TabBar.BackgroundColor3 = Color3.fromRGB(35, 36, 36)
+TabBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TabBar.BorderSizePixel = 0
+TabBar.Position = UDim2.new(0, 0, 1, 0)
+TabBar.Size = UDim2.new(0, 371, 0, 20)
+
+Body.Name = "Body"
+Body.Parent = TabBar
+Body.BackgroundColor3 = Color3.fromRGB(21, 22, 23)
+Body.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Body.BorderSizePixel = 0
+Body.Position = UDim2.new(0, 0, 1, 0)
+Body.Size = UDim2.new(0, 371, 0, 220)
+
+Scroller.Name = "Scroller"
+Scroller.Parent = Body
+Scroller.Active = true
+Scroller.BackgroundColor3 = Color3.fromRGB(21, 22, 23)
+Scroller.BorderColor3 = Color3.fromRGB(56, 57, 65)
+Scroller.BorderSizePixel = 0
+Scroller.Position = UDim2.new(0.0269541778, 0, 0.0454545468, 1)
+Scroller.Size = UDim2.new(0, 350, 0, 173)
+Scroller.ScrollBarImageColor3 = Color3.fromRGB(78, 78, 78)
+
+UIStroke.Parent = Scroller
+UIStroke.Color = Color3.fromRGB(56, 57, 65)
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke.LineJoinMode = Enum.LineJoinMode.Miter
+
+TextBox.Parent = Scroller
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Size = UDim2.new(1, 0, 1, 0)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.Code
+TextBox.MultiLine = true
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 14.000
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+Scale.Name = "Scale"
+Scale.Parent = Body
+Scale.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Scale.BackgroundTransparency = 1.000
+Scale.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Scale.BorderSizePixel = 0
+Scale.Position = UDim2.new(0, 351, 0, 200)
+Scale.Rotation = -90.000
+Scale.Size = UDim2.new(0, 20, 0, 20)
+Scale.Image = "rbxassetid://510167128"
+Scale.ImageColor3 = Color3.fromRGB(30, 48, 68)
+
+ExecuteButton.Name = "ExecuteButton"
+ExecuteButton.Parent = Body
+ExecuteButton.BackgroundColor3 = Color3.fromRGB(41, 74, 122)
+ExecuteButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteButton.BorderSizePixel = 0
+ExecuteButton.Position = UDim2.new(0.0269541778, 5, 0.845454574, 6)
+ExecuteButton.Size = UDim2.new(0, 120, 0, 20)
+ExecuteButton.Font = Enum.Font.Code
+ExecuteButton.Text = "Execute"
+ExecuteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteButton.TextSize = 14.000
+
+Tab.Name = "Tab"
+Tab.Parent = TabBar
+Tab.BackgroundColor3 = Color3.fromRGB(35, 36, 36)
+Tab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tab.BorderSizePixel = 0
+Tab.Position = UDim2.new(0, 8, 0, 0)
+Tab.Size = UDim2.new(0, 50, 0, 20)
+
+Title.Name = "Title"
+Title.Parent = Tab
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(0, 50, 0, 20)
+Title.Font = Enum.Font.Code
+Title.Text = "File"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 16.000
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+UIPadding.Parent = Title
+UIPadding.PaddingLeft = UDim.new(0, 8)
+
+TabList.Name = "TabList"
+TabList.Parent = Tab
+TabList.Visible = false
+TabList.BackgroundColor3 = Color3.fromRGB(35, 36, 36)
+TabList.BackgroundTransparency = 0.200
+TabList.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TabList.BorderSizePixel = 0
+TabList.Position = UDim2.new(0.340000004, 0, 0.450000763, -2)
+TabList.Size = UDim2.new(0, 120, 0, 170)
+
+UIStroke_2.Parent = TabList
+UIStroke_2.Color = Color3.fromRGB(17, 17, 17)
+UIStroke_2.Transparency = 0.400
+UIStroke_2.Thickness = 2.500
+
+OpenFile.Name = "OpenFile"
+OpenFile.Parent = TabList
+OpenFile.AnchorPoint = Vector2.new(0.5, 0.5)
+OpenFile.BackgroundColor3 = Color3.fromRGB(35, 36, 36)
+OpenFile.BackgroundTransparency = 0.200
+OpenFile.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenFile.BorderSizePixel = 0
+OpenFile.Position = UDim2.new(0.456521749, 0, 0.511333287, -38)
+OpenFile.Size = UDim2.new(0, 110, 0, 50)
+
+UIStroke_3.Parent = OpenFile
+
+OpenFile_2.Name = "OpenFile"
+OpenFile_2.Parent = OpenFile
+OpenFile_2.AnchorPoint = Vector2.new(0.5, 0.5)
+OpenFile_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenFile_2.BackgroundTransparency = 1.000
+OpenFile_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenFile_2.BorderSizePixel = 0
+OpenFile_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+OpenFile_2.Size = UDim2.new(0, 90, 0, 30)
+OpenFile_2.Font = Enum.Font.Code
+OpenFile_2.Text = "Open File"
+OpenFile_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenFile_2.TextSize = 13.000
+
+TextLabel.Parent = OpenFile_2
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.633987069, -12, 0.586666346, 7)
+TextLabel.Size = UDim2.new(0, 40, 0, 11)
+TextLabel.Font = Enum.Font.Code
+TextLabel.Text = "CTRL + O"
+TextLabel.TextColor3 = Color3.fromRGB(127, 127, 127)
+TextLabel.TextSize = 14.000
+
+UIListLayout.Parent = TabList
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 5)
+
+UIPadding_2.Parent = TabList
+UIPadding_2.PaddingLeft = UDim.new(0, 5)
+UIPadding_2.PaddingTop = UDim.new(0, 5)
+
+SaveFile.Name = "Save File"
+SaveFile.Parent = TabList
+SaveFile.AnchorPoint = Vector2.new(0.5, 0.5)
+SaveFile.BackgroundColor3 = Color3.fromRGB(35, 36, 36)
+SaveFile.BackgroundTransparency = 0.200
+SaveFile.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SaveFile.BorderSizePixel = 0
+SaveFile.Position = UDim2.new(0.5, 0, 0.5, -38)
+SaveFile.Size = UDim2.new(0, 110, 0, 50)
+
+UIStroke_4.Parent = SaveFile
+
+SaveFile_2.Name = "SaveFile"
+SaveFile_2.Parent = SaveFile
+SaveFile_2.AnchorPoint = Vector2.new(0.5, 0.5)
+SaveFile_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SaveFile_2.BackgroundTransparency = 1.000
+SaveFile_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SaveFile_2.BorderSizePixel = 0
+SaveFile_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+SaveFile_2.Size = UDim2.new(0, 90, 0, 30)
+SaveFile_2.Font = Enum.Font.Code
+SaveFile_2.Text = "Save File"
+SaveFile_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SaveFile_2.TextSize = 13.000
+
+UIPadding_3.Parent = SaveFile_2
+UIPadding_3.PaddingBottom = UDim.new(0, 5)
+UIPadding_3.PaddingRight = UDim.new(0, 5)
+
+TextLabel_2.Parent = SaveFile_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.634000003, -12, 0.587000012, 7)
+TextLabel_2.Size = UDim2.new(0, 40, 0, 11)
+TextLabel_2.Font = Enum.Font.Code
+TextLabel_2.Text = "CTRL + S"
+TextLabel_2.TextColor3 = Color3.fromRGB(127, 127, 127)
+TextLabel_2.TextSize = 14.000
+
+Discard.Name = "Discard"
+Discard.Parent = TabList
+Discard.AnchorPoint = Vector2.new(0.5, 0.5)
+Discard.BackgroundColor3 = Color3.fromRGB(35, 36, 36)
+Discard.BackgroundTransparency = 0.200
+Discard.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Discard.BorderSizePixel = 0
+Discard.Position = UDim2.new(0.5, 0, 0.5, -38)
+Discard.Size = UDim2.new(0, 110, 0, 50)
+
+UIStroke_5.Parent = Discard
+
+Discard_2.Name = "Discard"
+Discard_2.Parent = Discard
+Discard_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Discard_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Discard_2.BackgroundTransparency = 1.000
+Discard_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Discard_2.BorderSizePixel = 0
+Discard_2.Position = UDim2.new(0.5, 2, 0.5, 0)
+Discard_2.Size = UDim2.new(0, 90, 0, 30)
+Discard_2.Font = Enum.Font.Code
+Discard_2.Text = "Discard Changes"
+Discard_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Discard_2.TextSize = 13.000
+
+UIPadding_4.Parent = Discard_2
+UIPadding_4.PaddingBottom = UDim.new(0, 5)
+UIPadding_4.PaddingRight = UDim.new(0, 5)
+
+TextLabel_3.Parent = Discard_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.634000003, -14, 0.587000012, 7)
+TextLabel_3.Size = UDim2.new(0, 40, 0, 11)
+TextLabel_3.Font = Enum.Font.Code
+TextLabel_3.Text = "CTRL + D"
+TextLabel_3.TextColor3 = Color3.fromRGB(127, 127, 127)
+TextLabel_3.TextSize = 14.000
+
+Title_2.Name = "Title"
+Title_2.Parent = Main
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_2.BorderSizePixel = 0
+Title_2.Position = UDim2.new(0.094339624, -10, 0, 0)
+Title_2.Size = UDim2.new(0, 200, 0, 20)
+Title_2.Font = Enum.Font.Code
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextSize = 16.000
+Title_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Shrink.Name = "Shrink"
+Shrink.Parent = Main
+Shrink.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shrink.BackgroundTransparency = 1.000
+Shrink.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Shrink.BorderSizePixel = 0
+Shrink.Position = UDim2.new(0, 3, 0, 1)
+Shrink.Size = UDim2.new(0, 20, 0, 20)
+local function LoadCustomImage(imageLabel, url)
+    local data = game:HttpGet(url)
+    local file = "temp.png"
+    writefile(file, data)
+    imageLabel.Image = getcustomasset(file)
+    delfile(file)
+end
+LoadCustomImage(Shrink, "https://cdn.discordapp.com/attachments/1510821549555322920/1523373069744472224/Dropdown.png?ex=6a4bdf3a&is=6a4a8dba&hm=18498e417083d5c135fc820ee09840727483708f27ba75635a2ccc7216ab6b7d")
+
+-- Scripts:
+
+local function PLALAP_script() -- ImGui.LocalScript 
+	local script = Instance.new('LocalScript', ImGui)
+
+	local UIS = game:GetService("UserInputService")
+	local gui = script.Parent
+	local main = gui.Main
+	local tabBar = main.TabBar
+	local body = tabBar.Body
+	local scaler = body.Scale
+	local title = main.Title
+	local scrollingframe = body.Scroller
+	local button = body.ExecuteButton
+	local textbox = scrollingframe.TextBox
+	local tab = tabBar.Tab
+	UIS.InputBegan:Connect(function(input)
+		if input.KeyCode == Enum.KeyCode.Insert then
+			gui.Enabled = not gui.Enabled
+		end	
+	end)
+	local dragging = false
+	local startMouse
+	local startMainSize
+	local startBodySize
+	
+	-- LOCK MAIN HEIGHT
+	local FIXED_MAIN_HEIGHT = 20
+	
+	-- limits
+	local MIN_X, MAX_X = 371, 800
+	local MIN_Y, MAX_Y = 220, 500
+	local function ensurePadding()
+		local pad = scrollingframe:FindFirstChildOfClass("UIPadding")
+		if not pad then
+			pad = Instance.new("UIPadding")
+			pad.Parent = scrollingframe
+		end
+	
+		pad.PaddingLeft = UDim.new(0, 10)
+		pad.PaddingRight = UDim.new(0, 10)
+		pad.PaddingTop = UDim.new(0, 10)
+		pad.PaddingBottom = UDim.new(0, 10)
+	end
+	-- enforce base height once
+	main.Size = UDim2.fromOffset(main.Size.X.Offset, FIXED_MAIN_HEIGHT)
+	tab.MouseEnter:Connect(function()
+		tab.BackgroundColor3 = Color3.fromRGB(66, 150, 250)
+	end)
+	tab.MouseLeave:Connect(function()
+		tab.BackgroundColor3 = Color3.fromRGB(35, 36, 36)
+	end)
+	tab.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			tab.TabList.Visible = not tab.TabList.Visible
+		end
+	end)
+	button.MouseEnter:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(66, 150, 250)
+	end)
+	button.MouseLeave:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(41, 74, 122)
+	end)
+	button.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			loadstring(textbox.Text)()
+		end
+	end)
+	------------------------------------------------
+	-- KEEP TITLE FIXED (DO NOT SCALE OR MOVE IT)
+	------------------------------------------------
+	title.AnchorPoint = Vector2.new(0, 0)
+	title.Position = UDim2.fromOffset(25, 0) -- locked spot
+	
+	------------------------------------------------
+	-- KEEP SCROLLER SCALING WITH BODY
+	------------------------------------------------
+	local function updateScroller()
+		-- smaller size (tweak these numbers as needed)
+		local widthOffset = -30
+		local heightOffset = -70
+	
+		scrollingframe.Size = UDim2.new(1, widthOffset, 1, heightOffset)
+	
+		-- center it inside body
+		scrollingframe.AnchorPoint = Vector2.new(0.5, 0.5)
+		scrollingframe.Position = UDim2.new(0.5, 0, 0.46, 0)
+		ensurePadding()
+	end
+	local function updateButton()
+		-- X scales with body width
+		local widthOffset = -30
+	
+		-- always bottom aligned inside body
+		button.AnchorPoint = Vector2.new(0, 1)
+		button.Position = UDim2.new(0, 15, 1, -10)
+	
+		-- full width scaling + fixed height
+		button.Size = UDim2.new(1, widthOffset, 0, 20)
+	end
+	------------------------------------------------
+	-- SCALE HANDLE VISUAL POSITION UPDATE
+	------------------------------------------------
+	local function updateScaler()
+		scaler.Position = UDim2.new(1, -20, 1, -20)
+	end
+	
+	updateScroller()
+	updateScaler()
+	updateButton()
+	------------------------------------------------
+	-- HOVER
+	------------------------------------------------
+	scaler.MouseEnter:Connect(function()
+		scaler.ImageColor3 = Color3.fromRGB(51, 108, 175)
+	end)
+	
+	scaler.MouseLeave:Connect(function()
+		if not dragging then
+			scaler.ImageColor3 = Color3.fromRGB(30, 48, 68)
+		end
+	end)
+	local function BackColor(obj)
+		obj.MouseEnter:Connect(function()
+			main.BackgroundColor3 = Color3.fromRGB(41, 74, 122)
+		end)
+		obj.MouseLeave:Connect(function()
+			main.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+		end)
+	end
+	BackColor(tabBar)
+	BackColor(main)
+	BackColor(body)
+	------------------------------------------------
+	-- START DRAG
+	------------------------------------------------
+	scaler.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			startMouse = UIS:GetMouseLocation()
+			startMainSize = main.Size
+			startBodySize = body.Size
+		end
+	end)
+	
+	------------------------------------------------
+	-- STOP DRAG
+	------------------------------------------------
+	UIS.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = false
+		end
+	end)
+	
+	------------------------------------------------
+	-- RESIZE LOGIC
+	------------------------------------------------
+	UIS.InputChanged:Connect(function(input)
+		if not dragging then return end
+		if input.UserInputType ~= Enum.UserInputType.MouseMovement then return end
+	
+		local delta = UIS:GetMouseLocation() - startMouse
+	
+		-- MAIN WIDTH ONLY
+		local newMainX = math.clamp(startMainSize.X.Offset + delta.X, MIN_X, MAX_X)
+	
+		-- BODY RESIZE (X + Y)
+		local newBodyX = math.clamp(startBodySize.X.Offset + delta.X, MIN_X, MAX_X)
+		local newBodyY = math.clamp(startBodySize.Y.Offset + delta.Y, MIN_Y, MAX_Y)
+	
+		-- APPLY MAIN (HEIGHT LOCKED)
+		main.Size = UDim2.fromOffset(newMainX, FIXED_MAIN_HEIGHT)
+	
+		-- TABBAR FOLLOWS WIDTH
+		tabBar.Size = UDim2.fromOffset(newMainX, tabBar.Size.Y.Offset)
+	
+		-- BODY RESIZABLE
+		body.Size = UDim2.fromOffset(newBodyX, newBodyY)
+	
+		-- KEEP SCROLLER SCALING INSIDE BODY
+		updateScroller()
+	
+		-- KEEP SCALER STUCK TO CORNER (THIS FIXES "NOT MOVING")
+		updateScaler()
+		
+		-- this
+		updateButton()
+	end)
+	
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = main
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(PLALAP_script)()]]
+local code = [[-- Monstrum's Gui to Lua\n-- Version: 3.2
+
+-- Instances:
+
+local ImGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local TabBar = Instance.new("Frame")
+local Body = Instance.new("Frame")
+local Scroller = Instance.new("ScrollingFrame")
+local UIStroke = Instance.new("UIStroke")
+local TextBox = Instance.new("TextBox")
+local Scale = Instance.new("ImageLabel")
+local ExecuteButton = Instance.new("TextLabel")
+local Tab = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local UIPadding = Instance.new("UIPadding")
+local TabList = Instance.new("Frame")
+local UIStroke_2 = Instance.new("UIStroke")
+local OpenFile = Instance.new("Frame")
+local UIStroke_3 = Instance.new("UIStroke")
+local OpenFile_2 = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local UIListLayout = Instance.new("UIListLayout")
+local UIPadding_2 = Instance.new("UIPadding")
+local SaveFile = Instance.new("Frame")
+local UIStroke_4 = Instance.new("UIStroke")
+local SaveFile_2 = Instance.new("TextLabel")
+local UIPadding_3 = Instance.new("UIPadding")
+local TextLabel_2 = Instance.new("TextLabel")
+local Discard = Instance.new("Frame")
+local UIStroke_5 = Instance.new("UIStroke")
+local Discard_2 = Instance.new("TextLabel")
+local UIPadding_4 = Instance.new("UIPadding")
+local TextLabel_3 = Instance.new("TextLabel")
+local Title_2 = Instance.new("TextLabel")
+local Shrink = Instance.new("ImageLabel")
+
+--Properties:
+
+ImGui.Name = "ImGui"
+ImGui.Parent = game:GetService("CoreGui")
+ImGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
+
+Main.Name = "Main"
+Main.Parent = ImGui
+Main.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.0849604234, 0, 0.122075282, 0)
+Main.Size = UDim2.new(0, 371, 0, 20)
+Main.ZIndex = 2147483647
+
+TabBar.Name = "TabBar"
+TabBar.Parent = Main
+TabBar.BackgroundColor3 = Color3.fromRGB(35, 36, 36)
+TabBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TabBar.BorderSizePixel = 0
+TabBar.Position = UDim2.new(0, 0, 1, 0)
+TabBar.Size = UDim2.new(0, 371, 0, 20)
+
+Body.Name = "Body"
+Body.Parent = TabBar
+Body.BackgroundColor3 = Color3.fromRGB(21, 22, 23)
+Body.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Body.BorderSizePixel = 0
+Body.Position = UDim2.new(0, 0, 1, 0)
+Body.Size = UDim2.new(0, 371, 0, 220)
+
+Scroller.Name = "Scroller"
+Scroller.Parent = Body
+Scroller.Active = true
+Scroller.BackgroundColor3 = Color3.fromRGB(21, 22, 23)
+Scroller.BorderColor3 = Color3.fromRGB(56, 57, 65)
+Scroller.BorderSizePixel = 0
+Scroller.Position = UDim2.new(0.0269541778, 0, 0.0454545468, 1)
+Scroller.Size = UDim2.new(0, 350, 0, 173)
+Scroller.ScrollBarImageColor3 = Color3.fromRGB(78, 78, 78)
+
+UIStroke.Parent = Scroller
+UIStroke.Color = Color3.fromRGB(56, 57, 65)
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke.LineJoinMode = Enum.LineJoinMode.Miter
+
+TextBox.Parent = Scroller
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Size = UDim2.new(1, 0, 1, 0)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.Code
+TextBox.MultiLine = true
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 14.000
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+Scale.Name = "Scale"
+Scale.Parent = Body
+Scale.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Scale.BackgroundTransparency = 1.000
+Scale.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Scale.BorderSizePixel = 0
+Scale.Position = UDim2.new(0, 351, 0, 200)
+Scale.Rotation = -90.000
+Scale.Size = UDim2.new(0, 20, 0, 20)
+Scale.Image = "rbxassetid://510167128"
+Scale.ImageColor3 = Color3.fromRGB(30, 48, 68)
+
+ExecuteButton.Name = "ExecuteButton"
+ExecuteButton.Parent = Body
+ExecuteButton.BackgroundColor3 = Color3.fromRGB(41, 74, 122)
+ExecuteButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteButton.BorderSizePixel = 0
+ExecuteButton.Position = UDim2.new(0.0269541778, 5, 0.845454574, 6)
+ExecuteButton.Size = UDim2.new(0, 120, 0, 20)
+ExecuteButton.Font = Enum.Font.Code
+ExecuteButton.Text = "Execute"
+ExecuteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteButton.TextSize = 14.000
+
+Tab.Name = "Tab"
+Tab.Parent = TabBar
+Tab.BackgroundColor3 = Color3.fromRGB(35, 36, 36)
+Tab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tab.BorderSizePixel = 0
+Tab.Position = UDim2.new(0, 8, 0, 0)
+Tab.Size = UDim2.new(0, 50, 0, 20)
+
+Title.Name = "Title"
+Title.Parent = Tab
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(0, 50, 0, 20)
+Title.Font = Enum.Font.Code
+Title.Text = "File"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 16.000
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+UIPadding.Parent = Title
+UIPadding.PaddingLeft = UDim.new(0, 8)
+
+TabList.Name = "TabList"
+TabList.Parent = Tab
+TabList.Visible = false
+TabList.BackgroundColor3 = Color3.fromRGB(35, 36, 36)
+TabList.BackgroundTransparency = 0.200
+TabList.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TabList.BorderSizePixel = 0
+TabList.Position = UDim2.new(0.340000004, 0, 0.450000763, -2)
+TabList.Size = UDim2.new(0, 120, 0, 170)
+
+UIStroke_2.Parent = TabList
+UIStroke_2.Color = Color3.fromRGB(17, 17, 17)
+UIStroke_2.Transparency = 0.400
+UIStroke_2.Thickness = 2.500
+
+OpenFile.Name = "OpenFile"
+OpenFile.Parent = TabList
+OpenFile.AnchorPoint = Vector2.new(0.5, 0.5)
+OpenFile.BackgroundColor3 = Color3.fromRGB(35, 36, 36)
+OpenFile.BackgroundTransparency = 0.200
+OpenFile.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenFile.BorderSizePixel = 0
+OpenFile.Position = UDim2.new(0.456521749, 0, 0.511333287, -38)
+OpenFile.Size = UDim2.new(0, 110, 0, 50)
+
+UIStroke_3.Parent = OpenFile
+
+OpenFile_2.Name = "OpenFile"
+OpenFile_2.Parent = OpenFile
+OpenFile_2.AnchorPoint = Vector2.new(0.5, 0.5)
+OpenFile_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenFile_2.BackgroundTransparency = 1.000
+OpenFile_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenFile_2.BorderSizePixel = 0
+OpenFile_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+OpenFile_2.Size = UDim2.new(0, 90, 0, 30)
+OpenFile_2.Font = Enum.Font.Code
+OpenFile_2.Text = "Open File"
+OpenFile_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenFile_2.TextSize = 13.000
+
+TextLabel.Parent = OpenFile_2
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.633987069, -12, 0.586666346, 7)
+TextLabel.Size = UDim2.new(0, 40, 0, 11)
+TextLabel.Font = Enum.Font.Code
+TextLabel.Text = "CTRL + O"
+TextLabel.TextColor3 = Color3.fromRGB(127, 127, 127)
+TextLabel.TextSize = 14.000
+
+UIListLayout.Parent = TabList
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 5)
+
+UIPadding_2.Parent = TabList
+UIPadding_2.PaddingLeft = UDim.new(0, 5)
+UIPadding_2.PaddingTop = UDim.new(0, 5)
+
+SaveFile.Name = "Save File"
+SaveFile.Parent = TabList
+SaveFile.AnchorPoint = Vector2.new(0.5, 0.5)
+SaveFile.BackgroundColor3 = Color3.fromRGB(35, 36, 36)
+SaveFile.BackgroundTransparency = 0.200
+SaveFile.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SaveFile.BorderSizePixel = 0
+SaveFile.Position = UDim2.new(0.5, 0, 0.5, -38)
+SaveFile.Size = UDim2.new(0, 110, 0, 50)
+
+UIStroke_4.Parent = SaveFile
+
+SaveFile_2.Name = "SaveFile"
+SaveFile_2.Parent = SaveFile
+SaveFile_2.AnchorPoint = Vector2.new(0.5, 0.5)
+SaveFile_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SaveFile_2.BackgroundTransparency = 1.000
+SaveFile_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SaveFile_2.BorderSizePixel = 0
+SaveFile_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+SaveFile_2.Size = UDim2.new(0, 90, 0, 30)
+SaveFile_2.Font = Enum.Font.Code
+SaveFile_2.Text = "Save File"
+SaveFile_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SaveFile_2.TextSize = 13.000
+
+UIPadding_3.Parent = SaveFile_2
+UIPadding_3.PaddingBottom = UDim.new(0, 5)
+UIPadding_3.PaddingRight = UDim.new(0, 5)
+
+TextLabel_2.Parent = SaveFile_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.634000003, -12, 0.587000012, 7)
+TextLabel_2.Size = UDim2.new(0, 40, 0, 11)
+TextLabel_2.Font = Enum.Font.Code
+TextLabel_2.Text = "CTRL + S"
+TextLabel_2.TextColor3 = Color3.fromRGB(127, 127, 127)
+TextLabel_2.TextSize = 14.000
+
+Discard.Name = "Discard"
+Discard.Parent = TabList
+Discard.AnchorPoint = Vector2.new(0.5, 0.5)
+Discard.BackgroundColor3 = Color3.fromRGB(35, 36, 36)
+Discard.BackgroundTransparency = 0.200
+Discard.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Discard.BorderSizePixel = 0
+Discard.Position = UDim2.new(0.5, 0, 0.5, -38)
+Discard.Size = UDim2.new(0, 110, 0, 50)
+
+UIStroke_5.Parent = Discard
+
+Discard_2.Name = "Discard"
+Discard_2.Parent = Discard
+Discard_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Discard_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Discard_2.BackgroundTransparency = 1.000
+Discard_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Discard_2.BorderSizePixel = 0
+Discard_2.Position = UDim2.new(0.5, 2, 0.5, 0)
+Discard_2.Size = UDim2.new(0, 90, 0, 30)
+Discard_2.Font = Enum.Font.Code
+Discard_2.Text = "Discard Changes"
+Discard_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Discard_2.TextSize = 13.000
+
+UIPadding_4.Parent = Discard_2
+UIPadding_4.PaddingBottom = UDim.new(0, 5)
+UIPadding_4.PaddingRight = UDim.new(0, 5)
+
+TextLabel_3.Parent = Discard_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.634000003, -14, 0.587000012, 7)
+TextLabel_3.Size = UDim2.new(0, 40, 0, 11)
+TextLabel_3.Font = Enum.Font.Code
+TextLabel_3.Text = "CTRL + D"
+TextLabel_3.TextColor3 = Color3.fromRGB(127, 127, 127)
+TextLabel_3.TextSize = 14.000
+
+Title_2.Name = "Title"
+Title_2.Parent = Main
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_2.BorderSizePixel = 0
+Title_2.Position = UDim2.new(0.094339624, -10, 0, 0)
+Title_2.Size = UDim2.new(0, 200, 0, 20)
+Title_2.Font = Enum.Font.Code
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextSize = 16.000
+Title_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Shrink.Name = "Shrink"
+Shrink.Parent = Main
+Shrink.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shrink.BackgroundTransparency = 1.000
+Shrink.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Shrink.BorderSizePixel = 0
+Shrink.Position = UDim2.new(0, 3, 0, 1)
+Shrink.Size = UDim2.new(0, 20, 0, 20)
+local function LoadCustomImage(imageLabel, url)
+    local data = game:HttpGet(url)
+    local file = "temp.png"
+    writefile(file, data)
+    imageLabel.Image = getcustomasset(file)
+    delfile(file)
+end
+LoadCustomImage(Shrink, "https://cdn.discordapp.com/attachments/1510821549555322920/1523373069744472224/Dropdown.png?ex=6a4bdf3a&is=6a4a8dba&hm=18498e417083d5c135fc820ee09840727483708f27ba75635a2ccc7216ab6b7d")
+
+-- Scripts:
+
+local function PLALAP_script() -- ImGui.LocalScript 
+	local script = Instance.new('LocalScript', ImGui)
+
+	local UIS = game:GetService("UserInputService")
+	local gui = script.Parent
+	local main = gui.Main
+	local tabBar = main.TabBar
+	local body = tabBar.Body
+	local scaler = body.Scale
+	local title = main.Title
+	local scrollingframe = body.Scroller
+	local button = body.ExecuteButton
+	local textbox = scrollingframe.TextBox
+	local tab = tabBar.Tab
+	UIS.InputBegan:Connect(function(input)
+		if input.KeyCode == Enum.KeyCode.Insert then
+			gui.Enabled = not gui.Enabled
+		end	
+	end)
+	local dragging = false
+	local startMouse
+	local startMainSize
+	local startBodySize
+	
+	-- LOCK MAIN HEIGHT
+	local FIXED_MAIN_HEIGHT = 20
+	
+	-- limits
+	local MIN_X, MAX_X = 371, 800
+	local MIN_Y, MAX_Y = 220, 500
+	local function ensurePadding()
+		local pad = scrollingframe:FindFirstChildOfClass("UIPadding")
+		if not pad then
+			pad = Instance.new("UIPadding")
+			pad.Parent = scrollingframe
+		end
+	
+		pad.PaddingLeft = UDim.new(0, 10)
+		pad.PaddingRight = UDim.new(0, 10)
+		pad.PaddingTop = UDim.new(0, 10)
+		pad.PaddingBottom = UDim.new(0, 10)
+	end
+	-- enforce base height once
+	main.Size = UDim2.fromOffset(main.Size.X.Offset, FIXED_MAIN_HEIGHT)
+	tab.MouseEnter:Connect(function()
+		tab.BackgroundColor3 = Color3.fromRGB(66, 150, 250)
+	end)
+	tab.MouseLeave:Connect(function()
+		tab.BackgroundColor3 = Color3.fromRGB(35, 36, 36)
+	end)
+	tab.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			tab.TabList.Visible = not tab.TabList.Visible
+		end
+	end)
+	button.MouseEnter:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(66, 150, 250)
+	end)
+	button.MouseLeave:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(41, 74, 122)
+	end)
+	button.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			loadstring(textbox.Text)()
+		end
+	end)
+	------------------------------------------------
+	-- KEEP TITLE FIXED (DO NOT SCALE OR MOVE IT)
+	------------------------------------------------
+	title.AnchorPoint = Vector2.new(0, 0)
+	title.Position = UDim2.fromOffset(25, 0) -- locked spot
+	
+	------------------------------------------------
+	-- KEEP SCROLLER SCALING WITH BODY
+	------------------------------------------------
+	local function updateScroller()
+		-- smaller size (tweak these numbers as needed)
+		local widthOffset = -30
+		local heightOffset = -70
+	
+		scrollingframe.Size = UDim2.new(1, widthOffset, 1, heightOffset)
+	
+		-- center it inside body
+		scrollingframe.AnchorPoint = Vector2.new(0.5, 0.5)
+		scrollingframe.Position = UDim2.new(0.5, 0, 0.46, 0)
+		ensurePadding()
+	end
+	local function updateButton()
+		-- X scales with body width
+		local widthOffset = -30
+	
+		-- always bottom aligned inside body
+		button.AnchorPoint = Vector2.new(0, 1)
+		button.Position = UDim2.new(0, 15, 1, -10)
+	
+		-- full width scaling + fixed height
+		button.Size = UDim2.new(1, widthOffset, 0, 20)
+	end
+	------------------------------------------------
+	-- SCALE HANDLE VISUAL POSITION UPDATE
+	------------------------------------------------
+	local function updateScaler()
+		scaler.Position = UDim2.new(1, -20, 1, -20)
+	end
+	
+	updateScroller()
+	updateScaler()
+	updateButton()
+	------------------------------------------------
+	-- HOVER
+	------------------------------------------------
+	scaler.MouseEnter:Connect(function()
+		scaler.ImageColor3 = Color3.fromRGB(51, 108, 175)
+	end)
+	
+	scaler.MouseLeave:Connect(function()
+		if not dragging then
+			scaler.ImageColor3 = Color3.fromRGB(30, 48, 68)
+		end
+	end)
+	local function BackColor(obj)
+		obj.MouseEnter:Connect(function()
+			main.BackgroundColor3 = Color3.fromRGB(41, 74, 122)
+		end)
+		obj.MouseLeave:Connect(function()
+			main.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+		end)
+	end
+	BackColor(tabBar)
+	BackColor(main)
+	BackColor(body)
+	------------------------------------------------
+	-- START DRAG
+	------------------------------------------------
+	scaler.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			startMouse = UIS:GetMouseLocation()
+			startMainSize = main.Size
+			startBodySize = body.Size
+		end
+	end)
+	
+	------------------------------------------------
+	-- STOP DRAG
+	------------------------------------------------
+	UIS.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = false
+		end
+	end)
+	
+	------------------------------------------------
+	-- RESIZE LOGIC
+	------------------------------------------------
+	UIS.InputChanged:Connect(function(input)
+		if not dragging then return end
+		if input.UserInputType ~= Enum.UserInputType.MouseMovement then return end
+	
+		local delta = UIS:GetMouseLocation() - startMouse
+	
+		-- MAIN WIDTH ONLY
+		local newMainX = math.clamp(startMainSize.X.Offset + delta.X, MIN_X, MAX_X)
+	
+		-- BODY RESIZE (X + Y)
+		local newBodyX = math.clamp(startBodySize.X.Offset + delta.X, MIN_X, MAX_X)
+		local newBodyY = math.clamp(startBodySize.Y.Offset + delta.Y, MIN_Y, MAX_Y)
+	
+		-- APPLY MAIN (HEIGHT LOCKED)
+		main.Size = UDim2.fromOffset(newMainX, FIXED_MAIN_HEIGHT)
+	
+		-- TABBAR FOLLOWS WIDTH
+		tabBar.Size = UDim2.fromOffset(newMainX, tabBar.Size.Y.Offset)
+	
+		-- BODY RESIZABLE
+		body.Size = UDim2.fromOffset(newBodyX, newBodyY)
+	
+		-- KEEP SCROLLER SCALING INSIDE BODY
+		updateScroller()
+	
+		-- KEEP SCALER STUCK TO CORNER (THIS FIXES "NOT MOVING")
+		updateScaler()
+		
+		-- this
+		updateButton()
+	end)
+	
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = main
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(PLALAP_script)()]]
+queue_on_teleport(code)
